@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ToolboxMainWindow</class>
+ <widget class="QMainWindow" name="ToolboxMainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>391</width>
+    <height>408</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="1">
+     <widget class="QScrollArea" name="secondImageScrollArea">
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>181</width>
+         <height>289</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <widget class="QLabel" name="secondImage">
+          <property name="text">
+           <string>Image 2</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QScrollArea" name="firstImageScrollArea">
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>182</width>
+         <height>289</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QLabel" name="firstImage">
+          <property name="text">
+           <string>Image 1</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item row="1" column="0" colspan="2">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="4">
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="2">
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="0">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="1">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QCheckBox" name="scaleCheckBox">
+            <property name="text">
+             <string>Scale</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="ioCheckBox">
+            <property name="text">
+             <string>I/O Mode</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="loadFirstImageButton">
+          <property name="text">
+           <string>Load Image</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="3">
+       <widget class="QPushButton" name="loadSecondImageButton">
+        <property name="text">
+         <string>Load Image</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>391</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuCore_Function">
+    <property name="title">
+     <string>Core Functionality</string>
+    </property>
+    <addaction name="actionBlend_Two_Image"/>
+    <addaction name="actionContrast_and_Brightness"/>
+    <addaction name="actionDiscrete_Fourier_Transform_DFT"/>
+   </widget>
+   <widget class="QMenu" name="menuImgproc_module">
+    <property name="title">
+     <string>Image Processing</string>
+    </property>
+    <widget class="QMenu" name="menuSmooth_Image">
+     <property name="title">
+      <string>Smooth Image</string>
+     </property>
+     <addaction name="actionFilter"/>
+     <addaction name="actionApply_Custom_Kernel"/>
+    </widget>
+    <widget class="QMenu" name="menuEroding_and_Dilating">
+     <property name="title">
+      <string>Eroding and Dilating</string>
+     </property>
+     <addaction name="actionErode"/>
+     <addaction name="actionDilate"/>
+    </widget>
+    <addaction name="menuSmooth_Image"/>
+    <addaction name="menuEroding_and_Dilating"/>
+   </widget>
+   <widget class="QMenu" name="menuHighgui_Module">
+    <property name="title">
+     <string>High Level GUI and Media</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuCamera_Calibration">
+    <property name="title">
+     <string>Camera Calibration</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu2D_Features_Framework">
+    <property name="title">
+     <string>2D Features Framework</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuObject_Detection">
+    <property name="title">
+     <string>Object Detection</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuMachine_Learning">
+    <property name="title">
+     <string>Machine Learning</string>
+    </property>
+   </widget>
+   <addaction name="menuCore_Function"/>
+   <addaction name="menuImgproc_module"/>
+   <addaction name="menuHighgui_Module"/>
+   <addaction name="menuCamera_Calibration"/>
+   <addaction name="menu2D_Features_Framework"/>
+   <addaction name="menuObject_Detection"/>
+   <addaction name="menuMachine_Learning"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionObject_Detectopm">
+   <property name="text">
+    <string>Object Detectopm</string>
+   </property>
+  </action>
+  <action name="actionBlend_Two_Image">
+   <property name="text">
+    <string>Blend Two Image</string>
+   </property>
+  </action>
+  <action name="actionContrast_and_Brightness">
+   <property name="text">
+    <string>Contrast and Brightness</string>
+   </property>
+  </action>
+  <action name="actionDiscrete_Fourier_Transform_DFT">
+   <property name="text">
+    <string>Discrete Fourier Transform (DFT)</string>
+   </property>
+  </action>
+  <action name="actionFilter">
+   <property name="text">
+    <string>Filter</string>
+   </property>
+  </action>
+  <action name="actionApply_Custom_Kernel">
+   <property name="text">
+    <string>Apply Custom Kernel</string>
+   </property>
+  </action>
+  <action name="actionErode">
+   <property name="text">
+    <string>Erode</string>
+   </property>
+  </action>
+  <action name="actionDilate">
+   <property name="text">
+    <string>Dilate</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
