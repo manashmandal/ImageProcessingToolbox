@@ -6,6 +6,8 @@
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <QDebug>
+#include <QString>
+#include <QFileDialog>
 #include <iostream>
 
 #include "../imagehandler.h"
@@ -28,6 +30,8 @@ public:
 
 private slots:
     void on_openDFTImage_clicked();
+
+    void on_newImageButton_clicked();
 
 private:
     Ui::DFT *ui;

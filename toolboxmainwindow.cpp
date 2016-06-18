@@ -14,6 +14,8 @@ ToolboxMainWindow::ToolboxMainWindow(QWidget *parent) :
 
      ui->firstImage->setScaledContents(true);
      ui->secondImage->setScaledContents(true);
+
+     this->setWindowTitle("Image Processing Toolbox");
 }
 
 ToolboxMainWindow::~ToolboxMainWindow()
@@ -106,4 +108,25 @@ void ToolboxMainWindow::on_actionDiscrete_Fourier_Transform_DFT_triggered()
             dft->show();
         }
     }
+}
+
+void ToolboxMainWindow::on_actionFilter_triggered()
+{
+    if (firstImage.empty() && secondImage.empty()){
+        QMessageBox::warning(this, "No Image Found", "Load at least one image to proceed");
+    } else {
+        if (firstImage.empty()) {
+            Filter  *filter = new Filter(secondImage);
+            filter->show();
+        } else {
+            Filter  *filter = new Filter(firstImage);
+            filter->show();
+        }
+    }
+}
+
+void ToolboxMainWindow::on_actionApply_Custom_Kernel_triggered()
+{
+    CustomFilter *customFilter = new CustomFilter;
+    customFilter->show();
 }

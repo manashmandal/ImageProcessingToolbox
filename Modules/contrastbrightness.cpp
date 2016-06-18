@@ -36,11 +36,7 @@ void ContrastBrightness::on_alphaSlider_sliderMoved(int position)
 
 void ContrastBrightness::on_autoScaleCheckBox_clicked(bool checked)
 {
-    if (checked){
-        ui->modifiedImage->setScaledContents(true);
-    } else {
-        ui->modifiedImage->setScaledContents(false);
-    }
+    ui->modifiedImage->setScaledContents(checked);
 }
 
 void ContrastBrightness::on_betaSlider_sliderMoved(int position)

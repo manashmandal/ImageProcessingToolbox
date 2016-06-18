@@ -15,6 +15,8 @@
 #include "Modules/imageblender.h"
 #include "Modules/contrastbrightness.h"
 #include "Modules/dft.h"
+#include "Imgproc/filter.h"
+#include "Imgproc/customfilter.h"
 
 using namespace cv;
 
@@ -43,6 +45,10 @@ private slots:
     void on_actionContrast_and_Brightness_triggered();
 
     void on_actionDiscrete_Fourier_Transform_DFT_triggered();
+
+    void on_actionFilter_triggered();
+
+    void on_actionApply_Custom_Kernel_triggered();
 
 private:
     Ui::ToolboxMainWindow *ui;

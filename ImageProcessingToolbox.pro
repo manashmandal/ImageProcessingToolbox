@@ -36,17 +36,23 @@ SOURCES += main.cpp \
     imagehandler.cpp \
     Modules/imageblender.cpp \
     Modules/contrastbrightness.cpp \
-    Modules/dft.cpp
+    Modules/dft.cpp \
+    Imgproc/filter.cpp \
+    Imgproc/customfilter.cpp
 
 FORMS += \
     toolboxmainwindow.ui \
     Modules/imageblender.ui \
     Modules/contrastbrightness.ui \
-    Modules/dft.ui
+    Modules/dft.ui \
+    Imgproc/filter.ui \
+    Imgproc/customfilter.ui
 
 HEADERS += \
     toolboxmainwindow.h \
     imagehandler.h \
     Modules/imageblender.h \
     Modules/contrastbrightness.h \
-    Modules/dft.h
+    Modules/dft.h \
+    Imgproc/filter.h \
+    Imgproc/customfilter.h

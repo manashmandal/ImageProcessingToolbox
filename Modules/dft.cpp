@@ -6,6 +6,7 @@ DFT::DFT(QWidget *parent) :
     ui(new Ui::DFT)
 {
     ui->setupUi(this);
+    setWindowTitle("Discrete Fourier Transform (DFT)");
 }
 
 void DFT::discreteFourierTransform(Mat &img)
@@ -73,4 +74,14 @@ DFT::~DFT()
 void DFT::on_openDFTImage_clicked()
 {
     imshow("DFT Image", dftImage);
+}
+
+void DFT::on_newImageButton_clicked()
+{
+    QString imageFilePath = QFileDialog::getOpenFileName(this,
+          "Open Image", "D:\\hope", "Image Files (*.png *.jpg *.bmp)");
+    Mat image = imread(imageFilePath.toStdString());
+    ui->modifiedImage->setPixmap(ImageHandler::getQPixmap(image));
+    cvtColor(image, image, CV_BGR2GRAY);
+    discreteFourierTransform(image);
 }
