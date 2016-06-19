@@ -46,16 +46,23 @@
    <item row="1" column="0">
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QPushButton" name="createKernelButton">
+      <widget class="QCheckBox" name="autoScaleCheckBox">
        <property name="text">
-        <string>Create Kernel</string>
+        <string>Auto Scale</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="applyButton">
+      <widget class="QPushButton" name="getKernelButton">
        <property name="text">
-        <string>Apply</string>
+        <string>Get Recent Kernel</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="createKernelButton">
+       <property name="text">
+        <string>Create Kernel</string>
        </property>
       </widget>
      </item>

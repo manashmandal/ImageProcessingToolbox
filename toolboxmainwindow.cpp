@@ -127,6 +127,16 @@ void ToolboxMainWindow::on_actionFilter_triggered()
 
 void ToolboxMainWindow::on_actionApply_Custom_Kernel_triggered()
 {
-    CustomFilter *customFilter = new CustomFilter;
-    customFilter->show();
+    if (firstImage.empty() && secondImage.empty()){
+        QMessageBox::warning(this, "No Image Found", "Load at least one image to proceed");
+    } else {
+        if (firstImage.empty()) {
+            CustomFilter *customFilter = new CustomFilter(secondImage);
+            customFilter->show();
+        } else {
+            CustomFilter *customFilter = new CustomFilter(firstImage);
+            customFilter->show();
+        }
+    }
+
 }
