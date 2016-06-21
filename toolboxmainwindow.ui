@@ -182,15 +182,9 @@
      <addaction name="actionFilter"/>
      <addaction name="actionApply_Custom_Kernel"/>
     </widget>
-    <widget class="QMenu" name="menuEroding_and_Dilating">
-     <property name="title">
-      <string>Eroding and Dilating</string>
-     </property>
-     <addaction name="actionErode"/>
-     <addaction name="actionDilate"/>
-    </widget>
     <addaction name="menuSmooth_Image"/>
-    <addaction name="menuEroding_and_Dilating"/>
+    <addaction name="actionErodeDilate"/>
+    <addaction name="actionMore_Morphology_Transformation"/>
    </widget>
    <widget class="QMenu" name="menuHighgui_Module">
     <property name="title">
@@ -264,6 +258,16 @@
   <action name="actionDilate">
    <property name="text">
     <string>Dilate</string>
+   </property>
+  </action>
+  <action name="actionErodeDilate">
+   <property name="text">
+    <string>Erode | Dilate</string>
+   </property>
+  </action>
+  <action name="actionMore_Morphology_Transformation">
+   <property name="text">
+    <string>Morphology Transformation</string>
    </property>
   </action>
  </widget>

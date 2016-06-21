@@ -13,7 +13,6 @@ CustomFilter::CustomFilter(QWidget *parent) :
 
     connect(doneButton, SIGNAL(clicked(bool)), this, SLOT(getKernelMatrix(bool)));
     connect(kernelTableDialog, SIGNAL(finished(int)), this, SLOT(closeKernelTable(int)));
-
 }
 
 CustomFilter::CustomFilter(Mat img): originalImage(img), ui(new Ui::CustomFilter)

@@ -140,3 +140,33 @@ void ToolboxMainWindow::on_actionApply_Custom_Kernel_triggered()
     }
 
 }
+
+void ToolboxMainWindow::on_actionErodeDilate_triggered()
+{
+    if (firstImage.empty() && secondImage.empty()){
+            QMessageBox::warning(this, "No Image Found", "Load at least one image to proceed");
+        } else {
+            if (firstImage.empty()) {
+                ErosionDilation *erosionDilation = new ErosionDilation(secondImage);
+                erosionDilation->show();
+            } else {
+                ErosionDilation *erosionDilation = new ErosionDilation(firstImage);
+                erosionDilation->show();
+            }
+        }
+}
+
+void ToolboxMainWindow::on_actionMore_Morphology_Transformation_triggered()
+{
+    if (firstImage.empty() && secondImage.empty()){
+        QMessageBox::warning(this, "No Image Found", "Load at least one image to proceed");
+    } else {
+        if (firstImage.empty()) {
+            MorphologyTransformation  *morphologyTransformation = new MorphologyTransformation(secondImage);
+            morphologyTransformation->show();
+        } else {
+            MorphologyTransformation  *morphologyTransformation = new MorphologyTransformation(firstImage);
+            morphologyTransformation->show();
+        }
+    }
+}

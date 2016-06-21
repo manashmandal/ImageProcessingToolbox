@@ -38,7 +38,9 @@ SOURCES += main.cpp \
     Modules/contrastbrightness.cpp \
     Modules/dft.cpp \
     Imgproc/filter.cpp \
-    Imgproc/customfilter.cpp
+    Imgproc/customfilter.cpp \
+    Imgproc/erosiondilation.cpp \
+    Imgproc/morphologytransformation.cpp
 
 FORMS += \
     toolboxmainwindow.ui \
@@ -46,7 +48,9 @@ FORMS += \
     Modules/contrastbrightness.ui \
     Modules/dft.ui \
     Imgproc/filter.ui \
-    Imgproc/customfilter.ui
+    Imgproc/customfilter.ui \
+    Imgproc/erosiondilation.ui \
+    Imgproc/morphologytransformation.ui
 
 HEADERS += \
     toolboxmainwindow.h \
@@ -55,4 +59,6 @@ HEADERS += \
     Modules/contrastbrightness.h \
     Modules/dft.h \
     Imgproc/filter.h \
-    Imgproc/customfilter.h
+    Imgproc/customfilter.h \
+    Imgproc/erosiondilation.h \
+    Imgproc/morphologytransformation.h

@@ -12,11 +12,14 @@
 #include <QSize>
 
 #include "imagehandler.h"
+
 #include "Modules/imageblender.h"
 #include "Modules/contrastbrightness.h"
 #include "Modules/dft.h"
 #include "Imgproc/filter.h"
 #include "Imgproc/customfilter.h"
+#include "Imgproc/erosiondilation.h"
+#include "Imgproc/morphologytransformation.h"
 
 using namespace cv;
 
@@ -49,6 +52,10 @@ private slots:
     void on_actionFilter_triggered();
 
     void on_actionApply_Custom_Kernel_triggered();
+
+    void on_actionErodeDilate_triggered();
+
+    void on_actionMore_Morphology_Transformation_triggered();
 
 private:
     Ui::ToolboxMainWindow *ui;
