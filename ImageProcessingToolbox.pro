@@ -40,7 +40,13 @@ SOURCES += main.cpp \
     Imgproc/filter.cpp \
     Imgproc/customfilter.cpp \
     Imgproc/erosiondilation.cpp \
-    Imgproc/morphologytransformation.cpp
+    Imgproc/morphologytransformation.cpp \
+    Imgproc/imagepyramid.cpp \
+    Imgproc/thresholding.cpp \
+    Imgproc/EdgeDetectors/sobeledgedetector.cpp \
+    Imgproc/EdgeDetectors/laplacianedgedetector.cpp \
+    Imgproc/EdgeDetectors/cannyedgedetector.cpp \
+    Imgproc/houghtransformation.cpp
 
 FORMS += \
     toolboxmainwindow.ui \
@@ -50,7 +56,13 @@ FORMS += \
     Imgproc/filter.ui \
     Imgproc/customfilter.ui \
     Imgproc/erosiondilation.ui \
-    Imgproc/morphologytransformation.ui
+    Imgproc/morphologytransformation.ui \
+    Imgproc/imagepyramid.ui \
+    Imgproc/thresholding.ui \
+    Imgproc/EdgeDetectors/sobeledgedetector.ui \
+    Imgproc/EdgeDetectors/laplacianedgedetector.ui \
+    Imgproc/EdgeDetectors/cannyedgedetector.ui \
+    Imgproc/houghtransformation.ui
 
 HEADERS += \
     toolboxmainwindow.h \
@@ -61,4 +73,10 @@ HEADERS += \
     Imgproc/filter.h \
     Imgproc/customfilter.h \
     Imgproc/erosiondilation.h \
-    Imgproc/morphologytransformation.h
+    Imgproc/morphologytransformation.h \
+    Imgproc/imagepyramid.h \
+    Imgproc/thresholding.h \
+    Imgproc/EdgeDetectors/sobeledgedetector.h \
+    Imgproc/EdgeDetectors/laplacianedgedetector.h \
+    Imgproc/EdgeDetectors/cannyedgedetector.h \
+    Imgproc/houghtransformation.h

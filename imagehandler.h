@@ -5,6 +5,7 @@
 #include <opencv2/core/core.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/opencv.hpp>
+#include <vector>
 
 //All the required includes
 #include <QPixmap>
@@ -27,6 +28,7 @@
 #include <QTableWidget>
 #include <QTableWidgetItem>
 #include <QScrollArea>
+#include <QMessageBox>
 
 //stdlib
 #include <iostream>

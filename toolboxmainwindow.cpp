@@ -26,7 +26,7 @@ ToolboxMainWindow::~ToolboxMainWindow()
 void ToolboxMainWindow::on_loadFirstImageButton_clicked()
 {
     QString imageFilePath = QFileDialog::getOpenFileName(this,
-          "Open Image", "D:\\hope", "Image Files (*.png *.jpg *.bmp)");
+          "Open Image", "D:\\hope\\Screen Cap", "Image Files (*.png *.jpg *.bmp)");
     firstImage = imread(imageFilePath.toStdString());
     firstPixmap = ImageHandler::getQPixmap(firstImage);
     firstImageSize = firstPixmap.size();
@@ -167,6 +167,96 @@ void ToolboxMainWindow::on_actionMore_Morphology_Transformation_triggered()
         } else {
             MorphologyTransformation  *morphologyTransformation = new MorphologyTransformation(firstImage);
             morphologyTransformation->show();
+        }
+    }
+}
+
+void ToolboxMainWindow::on_actionImage_Pyramid_triggered()
+{
+    if (firstImage.empty() && secondImage.empty()){
+        QMessageBox::warning(this, "No Image Found", "Load at least one image to proceed");
+    } else {
+        if (firstImage.empty()) {
+            ImagePyramid  *pyramid = new ImagePyramid(secondImage);
+            pyramid->show();
+        } else {
+            ImagePyramid  *pyramid = new ImagePyramid(firstImage);
+            pyramid->show();
+        }
+    }
+}
+
+void ToolboxMainWindow::on_actionThresholding_triggered()
+{
+    if (firstImage.empty() && secondImage.empty()){
+        QMessageBox::warning(this, "No Image Found", "Load at least one image to proceed");
+    } else {
+        if (firstImage.empty()) {
+            Thresholding  *thresholding = new Thresholding(secondImage);
+            thresholding->show();
+        } else {
+            Thresholding  *thresholding = new Thresholding(firstImage);
+            thresholding->show();
+        }
+    }
+}
+
+void ToolboxMainWindow::on_actionSobel_Edge_Detector_triggered()
+{
+    if (firstImage.empty() && secondImage.empty()){
+        QMessageBox::warning(this, "No Image Found", "Load at least one image to proceed");
+    } else {
+        if (firstImage.empty()) {
+            SobelEdgeDetector  *sobelEdgeDetector = new SobelEdgeDetector(secondImage);
+            sobelEdgeDetector->show();
+        } else {
+            SobelEdgeDetector  *sobelEdgeDetector = new SobelEdgeDetector(firstImage);
+            sobelEdgeDetector->show();
+        }
+    }
+}
+
+void ToolboxMainWindow::on_actionLaplacian_Edge_Detector_triggered()
+{
+    if (firstImage.empty() && secondImage.empty()){
+        QMessageBox::warning(this, "No Image Found", "Load at least one image to proceed");
+    } else {
+        if (firstImage.empty()) {
+            LaplacianEdgeDetector  *laplacianEdgeDetector = new LaplacianEdgeDetector(secondImage);
+            laplacianEdgeDetector->show();
+        } else {
+            LaplacianEdgeDetector  *laplacianEdgeDetector = new LaplacianEdgeDetector(firstImage);
+            laplacianEdgeDetector->show();
+        }
+    }
+}
+
+void ToolboxMainWindow::on_actionCanny_Edge_Detector_triggered()
+{
+    if (firstImage.empty() && secondImage.empty()){
+        QMessageBox::warning(this, "No Image Found", "Load at least one image to proceed");
+    } else {
+        if (firstImage.empty()) {
+            CannyEdgeDetector  *cannyEdgeDetector = new CannyEdgeDetector(secondImage);
+            cannyEdgeDetector->show();
+        } else {
+            CannyEdgeDetector  *cannyEdgeDetector = new CannyEdgeDetector(firstImage);
+            cannyEdgeDetector->show();
+        }
+    }
+}
+
+void ToolboxMainWindow::on_actionHough_Transformation_triggered()
+{
+    if (firstImage.empty() && secondImage.empty()){
+        QMessageBox::warning(this, "No Image Found", "Load at least one image to proceed");
+    } else {
+        if (firstImage.empty()) {
+            HoughTransformation  *houghTransformation = new HoughTransformation(secondImage);
+            houghTransformation->show();
+        } else {
+            HoughTransformation  *houghTransformation = new HoughTransformation(firstImage);
+            houghTransformation->show();
         }
     }
 }

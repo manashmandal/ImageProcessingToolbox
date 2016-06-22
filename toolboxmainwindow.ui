@@ -182,9 +182,39 @@
      <addaction name="actionFilter"/>
      <addaction name="actionApply_Custom_Kernel"/>
     </widget>
+    <widget class="QMenu" name="menuEdge_Detector">
+     <property name="title">
+      <string>Edge Detector</string>
+     </property>
+     <addaction name="actionSobel_Edge_Detector"/>
+     <addaction name="actionCanny_Edge_Detector"/>
+     <addaction name="actionLaplacian_Edge_Detector"/>
+    </widget>
+    <widget class="QMenu" name="menuContour_Finder">
+     <property name="title">
+      <string>Contour Finder</string>
+     </property>
+     <addaction name="actionFind_Contour"/>
+     <addaction name="actionBounding_Box_and_Circles_for_Contour"/>
+     <addaction name="actionBounding_Rotated_Box_and_Ellipse_for_Contour"/>
+     <addaction name="actionImage_Moment"/>
+    </widget>
     <addaction name="menuSmooth_Image"/>
     <addaction name="actionErodeDilate"/>
+    <addaction name="separator"/>
     <addaction name="actionMore_Morphology_Transformation"/>
+    <addaction name="actionImage_Pyramid"/>
+    <addaction name="actionThresholding"/>
+    <addaction name="menuEdge_Detector"/>
+    <addaction name="separator"/>
+    <addaction name="actionHough_Transformation"/>
+    <addaction name="actionAffine_Transformations"/>
+    <addaction name="separator"/>
+    <addaction name="actionHistogram_Equalization"/>
+    <addaction name="actionBlack_Projection"/>
+    <addaction name="separator"/>
+    <addaction name="menuContour_Finder"/>
+    <addaction name="actionConvex_Hull"/>
    </widget>
    <widget class="QMenu" name="menuHighgui_Module">
     <property name="title">
@@ -268,6 +298,86 @@
   <action name="actionMore_Morphology_Transformation">
    <property name="text">
     <string>Morphology Transformation</string>
+   </property>
+  </action>
+  <action name="actionImage_Pyramid">
+   <property name="text">
+    <string>Image Pyramid</string>
+   </property>
+  </action>
+  <action name="actionThresholding">
+   <property name="text">
+    <string>Thresholding</string>
+   </property>
+  </action>
+  <action name="actionSobel_Edge_Detector">
+   <property name="text">
+    <string>Sobel Edge Detector</string>
+   </property>
+  </action>
+  <action name="actionCanny_Edge_Detector">
+   <property name="text">
+    <string>Canny Edge Detector</string>
+   </property>
+  </action>
+  <action name="actionLaplacian_Edge_Detector">
+   <property name="text">
+    <string>Laplacian Edge Detector</string>
+   </property>
+  </action>
+  <action name="actionLine_Transform">
+   <property name="text">
+    <string>Line Transform</string>
+   </property>
+  </action>
+  <action name="actionCircle_Transform">
+   <property name="text">
+    <string>Circle Transform</string>
+   </property>
+  </action>
+  <action name="actionHough_Transformation">
+   <property name="text">
+    <string>Hough Transformation</string>
+   </property>
+  </action>
+  <action name="actionAffine_Transformations">
+   <property name="text">
+    <string>Affine Transformations</string>
+   </property>
+  </action>
+  <action name="actionHistogram_Equalization">
+   <property name="text">
+    <string>Histogram Equalization</string>
+   </property>
+  </action>
+  <action name="actionBlack_Projection">
+   <property name="text">
+    <string>Black Projection</string>
+   </property>
+  </action>
+  <action name="actionConvex_Hull">
+   <property name="text">
+    <string>Convex Hull</string>
+   </property>
+  </action>
+  <action name="actionFind_Contour">
+   <property name="text">
+    <string>Find Contour</string>
+   </property>
+  </action>
+  <action name="actionBounding_Box_and_Circles_for_Contour">
+   <property name="text">
+    <string>Bounding Box and Circles for Contour</string>
+   </property>
+  </action>
+  <action name="actionBounding_Rotated_Box_and_Ellipse_for_Contour">
+   <property name="text">
+    <string>Bounding Rotated Box and Ellipse for Contour</string>
+   </property>
+  </action>
+  <action name="actionImage_Moment">
+   <property name="text">
+    <string>Image Moment</string>
    </property>
   </action>
  </widget>

@@ -20,6 +20,12 @@
 #include "Imgproc/customfilter.h"
 #include "Imgproc/erosiondilation.h"
 #include "Imgproc/morphologytransformation.h"
+#include "Imgproc/imagepyramid.h"
+#include "Imgproc/thresholding.h"
+#include "Imgproc/EdgeDetectors/sobeledgedetector.h"
+#include "Imgproc/EdgeDetectors/laplacianedgedetector.h"
+#include "Imgproc/EdgeDetectors/cannyedgedetector.h"
+#include "Imgproc/houghtransformation.h"
 
 using namespace cv;
 
@@ -56,6 +62,18 @@ private slots:
     void on_actionErodeDilate_triggered();
 
     void on_actionMore_Morphology_Transformation_triggered();
+
+    void on_actionImage_Pyramid_triggered();
+
+    void on_actionThresholding_triggered();
+
+    void on_actionSobel_Edge_Detector_triggered();
+
+    void on_actionLaplacian_Edge_Detector_triggered();
+
+    void on_actionCanny_Edge_Detector_triggered();
+
+    void on_actionHough_Transformation_triggered();
 
 private:
     Ui::ToolboxMainWindow *ui;
