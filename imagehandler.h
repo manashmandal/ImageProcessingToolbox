@@ -29,6 +29,7 @@
 #include <QTableWidgetItem>
 #include <QScrollArea>
 #include <QMessageBox>
+#include <QMouseEvent>
 
 //stdlib
 #include <iostream>

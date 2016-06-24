@@ -46,7 +46,10 @@ SOURCES += main.cpp \
     Imgproc/EdgeDetectors/sobeledgedetector.cpp \
     Imgproc/EdgeDetectors/laplacianedgedetector.cpp \
     Imgproc/EdgeDetectors/cannyedgedetector.cpp \
-    Imgproc/houghtransformation.cpp
+    Imgproc/houghtransformation.cpp \
+    Imgproc/affinetransformation.cpp \
+    Imgproc/histogramequalization.cpp \
+    Imgproc/backprojection.cpp
 
 FORMS += \
     toolboxmainwindow.ui \
@@ -62,7 +65,10 @@ FORMS += \
     Imgproc/EdgeDetectors/sobeledgedetector.ui \
     Imgproc/EdgeDetectors/laplacianedgedetector.ui \
     Imgproc/EdgeDetectors/cannyedgedetector.ui \
-    Imgproc/houghtransformation.ui
+    Imgproc/houghtransformation.ui \
+    Imgproc/affinetransformation.ui \
+    Imgproc/histogramequalization.ui \
+    Imgproc/backprojection.ui
 
 HEADERS += \
     toolboxmainwindow.h \
@@ -79,4 +85,7 @@ HEADERS += \
     Imgproc/EdgeDetectors/sobeledgedetector.h \
     Imgproc/EdgeDetectors/laplacianedgedetector.h \
     Imgproc/EdgeDetectors/cannyedgedetector.h \
-    Imgproc/houghtransformation.h
+    Imgproc/houghtransformation.h \
+    Imgproc/affinetransformation.h \
+    Imgproc/histogramequalization.h \
+    Imgproc/backprojection.h

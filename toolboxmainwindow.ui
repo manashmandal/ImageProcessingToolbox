@@ -211,7 +211,7 @@
     <addaction name="actionAffine_Transformations"/>
     <addaction name="separator"/>
     <addaction name="actionHistogram_Equalization"/>
-    <addaction name="actionBlack_Projection"/>
+    <addaction name="actionBack_Projection"/>
     <addaction name="separator"/>
     <addaction name="menuContour_Finder"/>
     <addaction name="actionConvex_Hull"/>
@@ -352,7 +352,7 @@
   </action>
   <action name="actionBlack_Projection">
    <property name="text">
-    <string>Black Projection</string>
+    <string>Back Projection</string>
    </property>
   </action>
   <action name="actionConvex_Hull">
@@ -378,6 +378,11 @@
   <action name="actionImage_Moment">
    <property name="text">
     <string>Image Moment</string>
+   </property>
+  </action>
+  <action name="actionBack_Projection">
+   <property name="text">
+    <string>Back Projection</string>
    </property>
   </action>
  </widget>

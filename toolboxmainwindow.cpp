@@ -260,3 +260,41 @@ void ToolboxMainWindow::on_actionHough_Transformation_triggered()
         }
     }
 }
+
+void ToolboxMainWindow::on_actionAffine_Transformations_triggered()
+{
+    if (firstImage.empty() && secondImage.empty()){
+        QMessageBox::warning(this, "No Image Found", "Load at least one image to proceed");
+    } else {
+        if (firstImage.empty()) {
+            AffineTransformation  *affTrans = new AffineTransformation(secondImage);
+            affTrans->show();
+        } else {
+            AffineTransformation  *affTrans = new AffineTransformation(firstImage);
+            affTrans->show();
+        }
+    }
+}
+
+void ToolboxMainWindow::on_actionHistogram_Equalization_triggered()
+{
+    if (firstImage.empty() && secondImage.empty()){
+        QMessageBox::warning(this, "No Image Found", "Load at least one image to proceed");
+    } else {
+        if (firstImage.empty()) {
+            HistogramEqualization  *histEq = new HistogramEqualization(secondImage);
+            histEq->show();
+        } else {
+            HistogramEqualization  *histEq = new HistogramEqualization(firstImage);
+            histEq->show();
+        }
+    }
+}
+
+
+
+void ToolboxMainWindow::on_actionBack_Projection_triggered()
+{
+    BackProjection *bp = new BackProjection(firstImage);
+    bp->show();
+}

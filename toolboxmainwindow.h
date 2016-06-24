@@ -26,6 +26,9 @@
 #include "Imgproc/EdgeDetectors/laplacianedgedetector.h"
 #include "Imgproc/EdgeDetectors/cannyedgedetector.h"
 #include "Imgproc/houghtransformation.h"
+#include "Imgproc/affinetransformation.h"
+#include "Imgproc/histogramequalization.h"
+#include "Imgproc/backprojection.h"
 
 using namespace cv;
 
@@ -74,6 +77,14 @@ private slots:
     void on_actionCanny_Edge_Detector_triggered();
 
     void on_actionHough_Transformation_triggered();
+
+    void on_actionAffine_Transformations_triggered();
+
+    void on_actionHistogram_Equalization_triggered();
+
+
+    
+    void on_actionBack_Projection_triggered();
 
 private:
     Ui::ToolboxMainWindow *ui;
