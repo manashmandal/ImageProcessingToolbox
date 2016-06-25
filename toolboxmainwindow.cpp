@@ -295,6 +295,90 @@ void ToolboxMainWindow::on_actionHistogram_Equalization_triggered()
 
 void ToolboxMainWindow::on_actionBack_Projection_triggered()
 {
-    BackProjection *bp = new BackProjection(firstImage);
-    bp->show();
+    if (firstImage.empty() && secondImage.empty()){
+        QMessageBox::warning(this, "No Image Found", "Load at least one image to proceed");
+    } else {
+        if (firstImage.empty()) {
+            BackProjection  *bp = new BackProjection(secondImage);
+            bp->show();
+        } else {
+            BackProjection  *bp = new BackProjection(firstImage);
+            bp->show();
+        }
+    }
+}
+
+void ToolboxMainWindow::on_actionFind_Contour_triggered()
+{
+    if (firstImage.empty() && secondImage.empty()){
+        QMessageBox::warning(this, "No Image Found", "Load at least one image to proceed");
+    } else {
+        if (firstImage.empty()) {
+            FindContour  *fc = new FindContour(secondImage);
+            fc->show();
+        } else {
+            FindContour  *fc = new FindContour(firstImage);
+            fc->show();
+        }
+    }
+}
+
+void ToolboxMainWindow::on_actionConvex_Hull_triggered()
+{
+    if (firstImage.empty() && secondImage.empty()){
+        QMessageBox::warning(this, "No Image Found", "Load at least one image to proceed");
+    } else {
+        if (firstImage.empty()) {
+            ConvexHull  *ch = new ConvexHull(secondImage);
+            ch->show();
+        } else {
+            ConvexHull  *ch = new ConvexHull(firstImage);
+            ch->show();
+        }
+    }
+}
+
+void ToolboxMainWindow::on_actionBounding_Box_and_Circles_for_Contour_triggered()
+{
+    if (firstImage.empty() && secondImage.empty()){
+        QMessageBox::warning(this, "No Image Found", "Load at least one image to proceed");
+    } else {
+        if (firstImage.empty()) {
+            BoxCircleContour  *bcc = new BoxCircleContour(secondImage);
+            bcc->show();
+        } else {
+            BoxCircleContour  *bcc = new BoxCircleContour(firstImage);
+            bcc->show();
+        }
+    }
+}
+
+void ToolboxMainWindow::on_actionBounding_Rotated_Box_and_Ellipse_for_Contour_triggered()
+{
+    if (firstImage.empty() && secondImage.empty()){
+        QMessageBox::warning(this, "No Image Found", "Load at least one image to proceed");
+    } else {
+        if (firstImage.empty()) {
+            BoxEllipseContour  *bec = new BoxEllipseContour(secondImage);
+            bec->show();
+        } else {
+            BoxEllipseContour  *bec = new BoxEllipseContour(firstImage);
+            bec->show();
+        }
+    }
+}
+
+void ToolboxMainWindow::on_actionImage_Moment_triggered()
+{
+    if (firstImage.empty() && secondImage.empty()){
+        QMessageBox::warning(this, "No Image Found", "Load at least one image to proceed");
+    } else {
+        if (firstImage.empty()) {
+            ImageMoment  *im = new ImageMoment(secondImage);
+            im->show();
+        } else {
+            ImageMoment  *im = new ImageMoment(firstImage);
+            im->show();
+        }
+    }
 }

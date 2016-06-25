@@ -11,6 +11,7 @@ AffineTransformation::AffineTransformation(QWidget *parent) :
 AffineTransformation::AffineTransformation(Mat img) : originalImage(img), ui(new Ui::AffineTransformation), rotation_mat(2, 3, CV_32FC1), warp_mat(2, 3, CV_32FC1), warpDst(Mat::zeros(img.rows, img.cols, img.type())), angle(0.0), scale(1.0)
 {
     ui->setupUi(this);
+    ui->image->setPixmap(ImageHandler::getQPixmap(originalImage));
     ui->imageScrollArea->setSizeAdjustPolicy(QScrollArea::AdjustToContents);
 
     sourceTriangle[0] = Point2f(0, 0);

@@ -29,6 +29,11 @@
 #include "Imgproc/affinetransformation.h"
 #include "Imgproc/histogramequalization.h"
 #include "Imgproc/backprojection.h"
+#include "Imgproc/Contour/findcontour.h"
+#include "Imgproc/convexhull.h"
+#include "Imgproc/Contour/boxcirclecontour.h"
+#include "Imgproc/Contour/boxellipsecontour.h"
+#include "Imgproc/Contour/imagemoment.h"
 
 using namespace cv;
 
@@ -85,6 +90,16 @@ private slots:
 
     
     void on_actionBack_Projection_triggered();
+
+    void on_actionFind_Contour_triggered();
+
+    void on_actionConvex_Hull_triggered();
+
+    void on_actionBounding_Box_and_Circles_for_Contour_triggered();
+
+    void on_actionBounding_Rotated_Box_and_Ellipse_for_Contour_triggered();
+
+    void on_actionImage_Moment_triggered();
 
 private:
     Ui::ToolboxMainWindow *ui;

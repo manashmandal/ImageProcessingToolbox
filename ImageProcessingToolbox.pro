@@ -49,7 +49,12 @@ SOURCES += main.cpp \
     Imgproc/houghtransformation.cpp \
     Imgproc/affinetransformation.cpp \
     Imgproc/histogramequalization.cpp \
-    Imgproc/backprojection.cpp
+    Imgproc/backprojection.cpp \
+    Imgproc/Contour/findcontour.cpp \
+    Imgproc/convexhull.cpp \
+    Imgproc/Contour/boxcirclecontour.cpp \
+    Imgproc/Contour/boxellipsecontour.cpp \
+    Imgproc/Contour/imagemoment.cpp
 
 FORMS += \
     toolboxmainwindow.ui \
@@ -68,7 +73,12 @@ FORMS += \
     Imgproc/houghtransformation.ui \
     Imgproc/affinetransformation.ui \
     Imgproc/histogramequalization.ui \
-    Imgproc/backprojection.ui
+    Imgproc/backprojection.ui \
+    Imgproc/Contour/findcontour.ui \
+    Imgproc/convexhull.ui \
+    Imgproc/Contour/boxcirclecontour.ui \
+    Imgproc/Contour/boxellipsecontour.ui \
+    Imgproc/Contour/imagemoment.ui
 
 HEADERS += \
     toolboxmainwindow.h \
@@ -88,4 +98,9 @@ HEADERS += \
     Imgproc/houghtransformation.h \
     Imgproc/affinetransformation.h \
     Imgproc/histogramequalization.h \
-    Imgproc/backprojection.h
+    Imgproc/backprojection.h \
+    Imgproc/Contour/findcontour.h \
+    Imgproc/convexhull.h \
+    Imgproc/Contour/boxcirclecontour.h \
+    Imgproc/Contour/boxellipsecontour.h \
+    Imgproc/Contour/imagemoment.h
