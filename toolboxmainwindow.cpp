@@ -382,3 +382,22 @@ void ToolboxMainWindow::on_actionImage_Moment_triggered()
         }
     }
 }
+
+void ToolboxMainWindow::on_actionWebCam_Video_Processing_Tool_triggered()
+{
+    WebCamVideoProcessingTool *wcvpt = new WebCamVideoProcessingTool;
+    connect(wcvpt->getCameraThread(), SIGNAL(sendCapturedFrame(QPixmap, QPixmap)), this, SLOT(receiveCameraFrame(QPixmap, QPixmap)));
+    wcvpt->show();
+}
+
+void ToolboxMainWindow::receiveCameraFrame(QPixmap originalFrame, QPixmap modifiedFrame)
+{
+    ui->firstImage->setPixmap(originalFrame);
+    ui->secondImage->setPixmap(modifiedFrame);
+
+}
+
+void ToolboxMainWindow::on_snapShotButton_clicked()
+{
+    firstImage = ImageHandler::requestedImage;
+}

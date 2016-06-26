@@ -5,6 +5,9 @@
 #include <opencv2/core/core.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/opencv.hpp>
+#include <opencv2/video/video.hpp>
+#include <opencv2/video.hpp>
+#include <opencv2/highgui.hpp>
 #include <vector>
 
 //All the required includes
@@ -30,6 +33,9 @@
 #include <QScrollArea>
 #include <QMessageBox>
 #include <QMouseEvent>
+#include <QThread>
+
+
 
 //stdlib
 #include <iostream>
@@ -43,6 +49,8 @@ public:
     ImageHandler();
     static QPixmap getQPixmap(Mat &image);
     static QPixmap getQPixmap(QImage &image);
+    static QPixmap getQPixmapAndSave(Mat &image);
+    static Mat requestedImage;
 };
 
 #endif // IMAGEHANDLER_H

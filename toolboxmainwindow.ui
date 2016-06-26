@@ -26,7 +26,7 @@
          <x>0</x>
          <y>0</y>
          <width>181</width>
-         <height>289</height>
+         <height>283</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout_4">
@@ -55,7 +55,7 @@
          <x>0</x>
          <y>0</y>
          <width>182</width>
-         <height>289</height>
+         <height>283</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout_3">
@@ -126,9 +126,9 @@
            </widget>
           </item>
           <item>
-           <widget class="QCheckBox" name="ioCheckBox">
+           <widget class="QPushButton" name="snapShotButton">
             <property name="text">
-             <string>I/O Mode</string>
+             <string> Take Snapshot </string>
             </property>
            </widget>
           </item>
@@ -220,6 +220,7 @@
     <property name="title">
      <string>High Level GUI and Media</string>
     </property>
+    <addaction name="actionWebCam_Video_Processing_Tool"/>
    </widget>
    <widget class="QMenu" name="menuCamera_Calibration">
     <property name="title">
@@ -383,6 +384,11 @@
   <action name="actionBack_Projection">
    <property name="text">
     <string>Back Projection</string>
+   </property>
+  </action>
+  <action name="actionWebCam_Video_Processing_Tool">
+   <property name="text">
+    <string>WebCam Video Processing Tool</string>
    </property>
   </action>
  </widget>

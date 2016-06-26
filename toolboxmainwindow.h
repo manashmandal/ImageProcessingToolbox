@@ -34,6 +34,7 @@
 #include "Imgproc/Contour/boxcirclecontour.h"
 #include "Imgproc/Contour/boxellipsecontour.h"
 #include "Imgproc/Contour/imagemoment.h"
+#include "Media/webcamvideoprocessingtool.h"
 
 using namespace cv;
 
@@ -100,6 +101,13 @@ private slots:
     void on_actionBounding_Rotated_Box_and_Ellipse_for_Contour_triggered();
 
     void on_actionImage_Moment_triggered();
+
+    void on_actionWebCam_Video_Processing_Tool_triggered();
+
+    void on_snapShotButton_clicked();
+
+public slots:
+    void receiveCameraFrame(QPixmap originalFrame, QPixmap modifiedFrame);
 
 private:
     Ui::ToolboxMainWindow *ui;

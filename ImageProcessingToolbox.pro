@@ -54,7 +54,9 @@ SOURCES += main.cpp \
     Imgproc/convexhull.cpp \
     Imgproc/Contour/boxcirclecontour.cpp \
     Imgproc/Contour/boxellipsecontour.cpp \
-    Imgproc/Contour/imagemoment.cpp
+    Imgproc/Contour/imagemoment.cpp \
+    Media/webcamvideoprocessingtool.cpp \
+    Media/camerathread.cpp
 
 FORMS += \
     toolboxmainwindow.ui \
@@ -78,7 +80,8 @@ FORMS += \
     Imgproc/convexhull.ui \
     Imgproc/Contour/boxcirclecontour.ui \
     Imgproc/Contour/boxellipsecontour.ui \
-    Imgproc/Contour/imagemoment.ui
+    Imgproc/Contour/imagemoment.ui \
+    Media/webcamvideoprocessingtool.ui
 
 HEADERS += \
     toolboxmainwindow.h \
@@ -103,4 +106,6 @@ HEADERS += \
     Imgproc/convexhull.h \
     Imgproc/Contour/boxcirclecontour.h \
     Imgproc/Contour/boxellipsecontour.h \
-    Imgproc/Contour/imagemoment.h
+    Imgproc/Contour/imagemoment.h \
+    Media/webcamvideoprocessingtool.h \
+    Media/camerathread.h
